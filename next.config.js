@@ -11,6 +11,8 @@ const path = require("path");
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
+
+    // List files that you would like to import across all .scss files.
     prependData: `@import "./base.scss";`,
   },
 };
