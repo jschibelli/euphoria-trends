@@ -34,7 +34,7 @@ export default function Top() {
             <BsSuitHeart />
             <a href="/profile/wishlist">Wishlist</a>
           </li>
-          <li
+          <div
             className={styles.li}
             onMouseOver={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
@@ -60,7 +60,7 @@ export default function Top() {
               </li>
             )}
             {visible && <UserMenu loggedIn={loggedIn} />}
-          </li>
+          </div>
         </ul>
       </div>
     </div>
