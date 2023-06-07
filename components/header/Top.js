@@ -5,7 +5,7 @@ import { BsSuitHeart } from 'react-icons/bs';
 import { RiAccountPinCircleLine, RiArrowDropDownFill } from "react-icons/ri";
 import { useState } from "react";
 
-export default function Top() {
+export default function Top({country}) {
   const [loggedIn, setLoggedIn] = useState(true);
   const [visible, setVisible] = useState(false)
   return (
@@ -15,10 +15,10 @@ export default function Top() {
         <ul className={styles.top__list}>
           <li className={styles.li}>
             <img
-              src="https://www.seekpng.com/png/detail/99-996186_all-photo-png-clipart-15-star-us-flag.png"
+              src={country.flag}
               alt=""
             ></img>
-            <span>United States / USD</span>
+            <span>{country.name}</span>
           </li>
           <li className={styles.li}>
             <MdSecurity />

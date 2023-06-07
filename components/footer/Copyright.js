@@ -3,7 +3,7 @@ import Link from "next/link";
 import { IoLocationSharp } from 'react-icons/io5';
 
 
-export default function Copyright() {
+export default function Copyright({ country }) {
   return (
   <div className={styles.footer__copyright}>
       <section>&#169; Euphoira Trends. All Rights Reserved.</section>
@@ -18,7 +18,7 @@ export default function Copyright() {
           }
           <li>
             <a href="">
-              <IoLocationSharp/> United States
+              <IoLocationSharp /> {country.name}
             </a>
           </li>
         </ul>
