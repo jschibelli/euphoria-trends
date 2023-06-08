@@ -1,5 +1,8 @@
 .footer {
     background: #f8f8f8;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     &__container {
         position: relative;
         width: 100%;
