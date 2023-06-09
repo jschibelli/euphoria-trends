@@ -3,6 +3,7 @@ import GitHub from "next-auth/providers/github";
 import Twitter from "next-auth/providers/twitter";
 import Facebook from "next-auth/providers/facebook";
 import Google from "next-auth/providers/google";
+import Auth0Provider from "next-auth/providers/auth0";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "./lib/mongodb";
 
@@ -24,6 +25,11 @@ export default NextAuth({
     Google({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
+    }),
+    Auth0Provider({
+      clientId: process.env.AUTH0_CLIENT_ID,
+      clientSecret: process.env.AUTH0_CLIENT_SECRET,
+      issuer: process.env.AUTH0_ISSUER,
     }),
   ],
 });
