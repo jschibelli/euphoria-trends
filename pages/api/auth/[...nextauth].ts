@@ -32,4 +32,11 @@ export default NextAuth({
       issuer: process.env.AUTH0_ISSUER,
     }),
   ],
+  pages: {
+    signIn: "/signin",
+  },
+  session: {
+    strategy: "jwt",
+  },
+  secret: process.eventNames.JWT_SECRET,
 });
