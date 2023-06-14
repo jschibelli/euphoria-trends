@@ -117,8 +117,8 @@ export default function signin({ providers, callbackUrl, csrfToken }) {
     }
   };
   const country = {
-    name: "Morocco",
-    flag: "https://cdn-icons-png.flaticon.com/512/197/197551.png?w=360",
+    name: "United States",
+    flag: "https://www.flaticon.com/free-icon/united-states_197484?term=united+states+flag&page=1&position=2&origin=search&related_id=197484",
   };
   return (
     <>
@@ -131,13 +131,13 @@ export default function signin({ providers, callbackUrl, csrfToken }) {
               <BiLeftArrowAlt />
             </div>
             <span>
-              We'd be happy to join us ! <Link href="/">Go Store</Link>
+              Take a look around! <Link href="/">Go Store</Link>
             </span>
           </div>
           <div className={styles.login__form}>
             <h1>Sign in</h1>
             <p>
-              Get access to one of the best Eshopping services in the world.
+              Login to Euhpoia Trends to manage your account.
             </p>
             <Formik
               enableReinitialize
@@ -194,7 +194,10 @@ export default function signin({ providers, callbackUrl, csrfToken }) {
                         className={styles.social__btn}
                         onClick={() => signIn(provider.id)}
                       >
-                        <img src={`../../icons/${provider.name}.png`} alt="" />
+                        <img
+                          src={`../../images/icons/${provider.name}.png`}
+                          alt=""
+                        />
                         Sign in with {provider.name}
                       </button>
                     </div>
@@ -208,7 +211,7 @@ export default function signin({ providers, callbackUrl, csrfToken }) {
           <div className={styles.login__form}>
             <h1>Sign up</h1>
             <p>
-              Get access to one of the best Eshopping services in the world.
+              Become a member to manage your orders, account and more!
             </p>
             <Formik
               enableReinitialize
